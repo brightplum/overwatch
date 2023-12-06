@@ -16,7 +16,7 @@
     {
       "name": "anthony",
       "email": "anthony@brightplum.com"
-    },
+    }
   ],
   "require": {
     "drupal/hook_event_dispatcher": "^3.3",

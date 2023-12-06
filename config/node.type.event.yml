@@ -1,0 +1,17 @@
+uuid: 0a2091ac-e2dc-4dc1-a799-228fa3b65825
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Stores data related to events'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

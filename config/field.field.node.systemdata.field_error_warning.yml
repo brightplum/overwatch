@@ -1,0 +1,29 @@
+uuid: 557b6309-e7f4-4ea5-89ef-75dcac50b8cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_error_warning
+    - node.type.errorwarning
+    - node.type.systemdata
+id: node.systemdata.field_error_warning
+field_name: field_error_warning
+entity_type: node
+bundle: systemdata
+label: 'Error Warning'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      errorwarning: errorwarning
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: errorwarning
+field_type: entity_reference

@@ -1,0 +1,12 @@
+/**
+* Styles for the Content Region.
+*/
+
+main {
+  background: $alabaster;
+  padding: rem-calc(40) rem-calc(15);
+
+  @media screen and (min-width: $breakpoint_s) {
+    padding: rem-calc(40) rem-calc(100);
+  }
+}

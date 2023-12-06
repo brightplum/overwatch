@@ -1,0 +1,18 @@
+uuid: d7cc5cd9-7db3-41e8-a782-a13ac53508f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - overwatch_bp_rest
+    - serialization
+    - simple_oauth
+id: overwatch_bp_rest_system_data_resource
+plugin_id: overwatch_bp_rest_system_data_resource
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - oauth2

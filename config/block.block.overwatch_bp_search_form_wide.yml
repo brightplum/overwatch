@@ -1,0 +1,23 @@
+uuid: 5e2b54b0-8739-4fe4-8372-ecbc32a99b71
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - overwatch_bp
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: overwatch_bp_search_form_wide
+theme: overwatch_bp
+region: content
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

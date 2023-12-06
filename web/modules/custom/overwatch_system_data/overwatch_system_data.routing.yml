@@ -1,0 +1,121 @@
+overwatch_system_data.content:
+  path: '/dashboard-system-data'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::content'
+    _title: 'Overwatch System Data'
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data:
+  path: '/overwatch-system-data/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonData'
+    _title: 'Overwatch System Data JSON'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_errors:
+  path: '/overwatch-system-data-errors/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataErrors'
+    _title: 'Overwatch System Data Errors JSON'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_warnings:
+  path: '/overwatch-system-data-warnings/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataWanings'
+    _title: 'Overwatch System Data Warnings JSON'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_extensions:
+  path: '/overwatch-system-data-extensions/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataExtensions'
+    _title: 'Overwatch System Data Extensions JSON'
+    type: NULL
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_extensions_security_update:
+  path: '/overwatch-system-data-security-update/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataExtensions'
+    _title: 'Overwatch System Data Extensions Security Update JSON'
+    type: 'security'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_extensions_all_updates:
+  path: '/overwatch-system-data-all-updates/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataExtensions'
+    _title: 'Overwatch System Data Extensions All Updates JSON'
+    type: 'update'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_by_node:
+  path: '/overwatch-system-data-by-node/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataByNode'
+    _title: 'Overwatch System Data By Node JSON'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_errors_by_node:
+  path: '/overwatch-system-data-errors-by-node/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataErrorsByNode'
+    _title: 'Overwatch System Data Errors By Node JSON'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_warnings_by_node:
+  path: '/overwatch-system-data-warnings-by-node/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataWarningsByNode'
+    _title: 'Overwatch System Data Warnings By Node JSON'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_extensions_by_node:
+  path: '/overwatch-system-data-extensions-by-node/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataExtensionsByNode'
+    _title: 'Overwatch System Data Extensions By Node JSON'
+    type: NULL
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_extensions_security_update_by_node:
+  path: '/overwatch-system-data-security-update-by-node/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataExtensionsByNode'
+    _title: 'Overwatch System Data Extensions Security Update By Node JSON'
+    type: 'security'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+
+overwatch_system_data.json_data_extensions_all_updates_by_node:
+  path: '/overwatch-system-data-all-updates-by-node/json'
+  defaults:
+    _controller: '\Drupal\overwatch_system_data\Controller\OverwatchSystemDataController::systemDataTechnicalJsonDataExtensionsByNode'
+    _title: 'Overwatch System Data Extensions All Updates By Node JSON'
+    type: 'update'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'

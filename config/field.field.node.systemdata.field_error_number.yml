@@ -1,0 +1,23 @@
+uuid: 83e626a7-fba6-4486-abc8-e76b3f70a67e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_error_number
+    - node.type.systemdata
+id: node.systemdata.field_error_number
+field_name: field_error_number
+entity_type: node
+bundle: systemdata
+label: 'Error Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,17 @@
+uuid: 23ed1f05-0382-4fe5-9457-808f32011b60
+langcode: en
+status: true
+dependencies:
+  module:
+    - overwatch_bp_dropdown
+title: 'Default cron handler'
+id: overwatch_bp_dropdown_cron
+weight: 0
+module: overwatch_bp_dropdown
+callback: overwatch_bp_dropdown_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

@@ -1,0 +1,23 @@
+uuid: 7bf34efb-f07b-4941-a6d0-bfebd387655f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_warning_number
+    - node.type.systemdata
+id: node.systemdata.field_warning_number
+field_name: field_warning_number
+entity_type: node
+bundle: systemdata
+label: 'Warning Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

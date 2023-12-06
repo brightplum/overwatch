@@ -1,0 +1,29 @@
+uuid: 3e460480-1738-4b9c-9a22-d7d6946bf012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.errorwarning.field_description
+    - field.field.node.errorwarning.field_timestamp
+    - field.field.node.errorwarning.field_type
+    - node.type.errorwarning
+  module:
+    - text
+    - user
+id: node.errorwarning.default
+targetEntityType: node
+bundle: errorwarning
+mode: default
+content:
+  field_description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_timestamp: true
+  field_type: true
+  links: true

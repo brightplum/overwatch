@@ -1,0 +1,33 @@
+uuid: fb926bb8-7fcd-44f3-b778-34857b0a7c7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_type
+field_name: field_event_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: create
+      label: Create
+    -
+      value: update
+      label: Update
+    -
+      value: delete
+      label: Delete
+    -
+      value: insert
+      label: Insert
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

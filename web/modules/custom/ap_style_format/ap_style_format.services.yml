@@ -1,0 +1,6 @@
+services:
+  ap_style_format.twig_extension:
+    arguments: ['@renderer']
+    class: Drupal\ap_style_format\APFormat
+    tags:
+      - { name: twig.extension }

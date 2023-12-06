@@ -1,0 +1,4 @@
+services:
+  overwatch_graphs.overwatch_graph_services:
+    class: Drupal\overwatch_graphs\Service\OverwatchGraphServices
+    arguments: ['@database', '@request_stack']

@@ -1,0 +1,7 @@
+name: 'Overwatch BP Dropdown'
+type: module
+description: 'Custom dropdown to switch between overwatch clients.'
+package: 'Brightplum'
+core_version_requirement: ^9 || ^10
+dependencies:
+  - block

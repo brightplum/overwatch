@@ -1,0 +1,26 @@
+uuid: dd18355f-3af8-4a72-8854-b8d6fd04f00f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.errorwarning.field_description
+    - field.field.node.errorwarning.field_timestamp
+    - field.field.node.errorwarning.field_type
+    - node.type.errorwarning
+  module:
+    - user
+id: node.errorwarning.teaser
+targetEntityType: node
+bundle: errorwarning
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_timestamp: true
+  field_type: true

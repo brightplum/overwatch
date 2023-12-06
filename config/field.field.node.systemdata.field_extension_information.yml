@@ -1,0 +1,29 @@
+uuid: adc8a284-9903-496f-81da-3ade9e801319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extension_information
+    - node.type.extensioninformation
+    - node.type.systemdata
+id: node.systemdata.field_extension_information
+field_name: field_extension_information
+entity_type: node
+bundle: systemdata
+label: 'Extension Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      extensioninformation: extensioninformation
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,5 @@
+name: 'Overwatch BP Rest'
+type: module
+description: 'Handles Event Rest Resource.'
+package: 'Brightplum'
+core_version_requirement: ^10

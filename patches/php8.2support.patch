@@ -1,0 +1,60 @@
+diff --git a/src/Plugin/views/field/ViewsJsonField.php b/src/Plugin/views/field/ViewsJsonField.php
+index 6192ab5..6886856 100644
+--- a/src/Plugin/views/field/ViewsJsonField.php
++++ b/src/Plugin/views/field/ViewsJsonField.php
+@@ -15,6 +15,13 @@ use Drupal\Core\Render\Markup;
+  */
+ class ViewsJsonField extends FieldPluginBase {
+ 
++  /**
++   * The table alias.
++   *
++   * @var string
++   */
++  public $table_alias = '';
++
+   /**
+    * Render.
+    */
+diff --git a/src/Plugin/views/query/ViewsJsonQuery.php b/src/Plugin/views/query/ViewsJsonQuery.php
+index b8e2aa2..5c7a8e0 100755
+--- a/src/Plugin/views/query/ViewsJsonQuery.php
++++ b/src/Plugin/views/query/ViewsJsonQuery.php
+@@ -24,6 +24,37 @@ use Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher;
+  */
+ class ViewsJsonQuery extends QueryPluginBase {
+ 
++  /**
++   * An array of fields.
++   *
++   * @var array
++   */
++  public $fields = [];
++
++  /**
++   * A simple array of order by clauses.
++   *
++   * @var array
++   */
++  public $orderby = [];
++
++  /**
++   * Not actually used.
++   *
++   * Copied over from \Drupal\views\Plugin\views\query\Sql::$where since
++   * QueryPluginBase depends on it.
++   *
++   * @var array
++   */
++  public $where = [];
++
++  /**
++   * A simple array of filter clauses.
++   *
++   * @var array
++   */
++  public $filter = [];
++
+   /**
+    * To store the contextual Filter info.
+    *

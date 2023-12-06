@@ -1,0 +1,133 @@
+uuid: 1202c01e-ed39-4899-ac68-0b3fe8c2c385
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.systemdata.field_all_updates
+    - field.field.node.systemdata.field_core_version_number
+    - field.field.node.systemdata.field_error_number
+    - field.field.node.systemdata.field_error_warning
+    - field.field.node.systemdata.field_extension_count
+    - field.field.node.systemdata.field_extension_information
+    - field.field.node.systemdata.field_last_cron_run_time
+    - field.field.node.systemdata.field_security_updates
+    - field.field.node.systemdata.field_site_machine_name
+    - field.field.node.systemdata.field_site_type
+    - field.field.node.systemdata.field_status_report
+    - field.field.node.systemdata.field_warning_number
+    - node.type.systemdata
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.systemdata.default
+targetEntityType: node
+bundle: systemdata
+mode: default
+content:
+  field_all_updates:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_core_version_number:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_error_number:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_error_warning:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_extension_count:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_extension_information:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_last_cron_run_time:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_security_updates:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_site_machine_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_site_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_status_report:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_warning_number:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

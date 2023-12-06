@@ -1,0 +1,7 @@
+overwatch-system-data:
+  js:
+    js/overwatch-system-data.js: {}
+  css:
+    theme:
+      css/overwatch-system-data-summary.css: {}
+      css/overwatch-system-data-search.css: {}

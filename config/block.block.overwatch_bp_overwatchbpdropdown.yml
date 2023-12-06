@@ -1,0 +1,25 @@
+uuid: 2a06cd95-9b29-4ad2-81a7-bde3aea8c660
+langcode: en
+status: true
+dependencies:
+  module:
+    - overwatch_bp_dropdown
+    - system
+  theme:
+    - overwatch_bp
+id: overwatch_bp_overwatchbpdropdown
+theme: overwatch_bp
+region: header_top
+weight: -6
+provider: null
+plugin: overwatch_bp_dropdown_block
+settings:
+  id: overwatch_bp_dropdown_block
+  label: 'Overwatch BP Dropdown'
+  label_display: '0'
+  provider: overwatch_bp_dropdown
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/dashboard\r\n/dashboard-system-data"

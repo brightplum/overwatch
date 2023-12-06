@@ -1,0 +1,126 @@
+uuid: cf0f8fea-c787-4835-a5ec-d576bb3f26a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_event_author
+    - field.field.node.event.field_event_bundle
+    - field.field.node.event.field_event_context
+    - field.field.node.event.field_event_entity
+    - field.field.node.event.field_event_severity
+    - field.field.node.event.field_event_timestamp
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_uuid
+    - field.field.node.event.field_site_base_url
+    - field.field.node.event.field_site_machine_name
+    - field.field.node.event.field_site_name
+    - node.type.event
+  module:
+    - options
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_event_author:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_event_bundle:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_event_context:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_event_entity:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_event_severity:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_event_timestamp:
+    type: timestamp
+    label: inline
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_event_type:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_event_uuid:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_site_base_url:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_site_machine_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_site_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

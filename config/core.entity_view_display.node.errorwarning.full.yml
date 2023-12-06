@@ -1,0 +1,30 @@
+uuid: 50356fc0-dd0c-460a-8830-d61b0df9bb81
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.errorwarning.field_description
+    - field.field.node.errorwarning.field_timestamp
+    - field.field.node.errorwarning.field_type
+    - node.type.errorwarning
+  module:
+    - text
+    - user
+id: node.errorwarning.full
+targetEntityType: node
+bundle: errorwarning
+mode: full
+content:
+  field_description:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_timestamp: true
+  field_type: true
+  links: true

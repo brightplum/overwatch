@@ -1,0 +1,22 @@
+uuid: 3782b18f-1b5e-49ea-a5d6-b268b009885b
+langcode: en
+status: false
+dependencies:
+  theme:
+    - overwatch_bp
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: overwatch_bp_secondary_local_tasks
+theme: overwatch_bp
+region: header_top
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

@@ -1,0 +1,7 @@
+name: AP Style Format
+description: Formats Twig Variables into AP Style.
+package: Custom
+
+type: module
+core: 8.x
+core_version_requirement: ">=10"

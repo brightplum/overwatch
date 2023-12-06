@@ -1,0 +1,21 @@
+uuid: 115ee0a1-2441-4a60-a4d3-a89984d5bfa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_security_update
+    - node.type.extensioninformation
+id: node.extensioninformation.field_security_update
+field_name: field_security_update
+entity_type: node
+bundle: extensioninformation
+label: 'Security Update'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

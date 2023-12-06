@@ -1,0 +1,25 @@
+uuid: 72d12c14-3f64-48bb-9cbe-55d6aba972db
+langcode: en
+status: true
+dependencies:
+  module:
+    - overwatch_graphs
+    - system
+  theme:
+    - overwatch_bp
+id: overwatch_bp_circlegraphforevents
+theme: overwatch_bp
+region: content
+weight: -10
+provider: null
+plugin: overwatch_graphs_circle_chart_block
+settings:
+  id: overwatch_graphs_circle_chart_block
+  label: 'Circle Graph for Events'
+  label_display: '0'
+  provider: overwatch_graphs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/dashboard"

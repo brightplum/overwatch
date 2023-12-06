@@ -1,0 +1,27 @@
+uuid: ea439162-c6f6-48f5-9158-911ca97d1af0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.errorwarning
+    - node.type.event
+    - node.type.extensioninformation
+    - node.type.systemdata
+    - rest.resource.overwatch_bp_rest_event_resource
+    - rest.resource.overwatch_bp_rest_system_data_resource
+  module:
+    - node
+    - rest
+    - system
+id: rest_api
+label: 'Rest API'
+weight: 4
+is_admin: null
+permissions:
+  - 'access content'
+  - 'create errorwarning content'
+  - 'create event content'
+  - 'create extensioninformation content'
+  - 'create systemdata content'
+  - 'restful post overwatch_bp_rest_event_resource'
+  - 'restful post overwatch_bp_rest_system_data_resource'

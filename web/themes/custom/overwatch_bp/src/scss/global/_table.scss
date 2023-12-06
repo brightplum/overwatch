@@ -1,0 +1,42 @@
+table {
+  background-color: $white;
+  border: 1px solid $grey;
+  border-radius: $global_radius;
+  border-spacing: 0;
+  padding: rem-calc(23) rem-calc(23) rem-calc(38) ;
+  width: 100%;
+
+  thead {
+    tr {
+      box-shadow: 0 1px 0 0 $grey;
+    }
+
+    th {
+      color: $gray68;
+      font-size: rem-calc(12);
+      font-weight: 500;
+      padding: rem-calc(8) rem-calc(11);
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      box-shadow: 0 1px 0 0 $grey;
+
+      &:hover {
+        background-color: rgba($navy-blue,.19);
+      }
+    }
+
+    td {
+      color: $charcoal;
+      padding: rem-calc(16) rem-calc(11);
+
+      a {
+        color: $charcoal;
+        text-decoration: none;
+      }
+    }
+  }
+}

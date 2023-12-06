@@ -1,0 +1,44 @@
+uuid: bc1fd577-5b62-45ff-aaeb-d472fb33f8ba
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.systemdata.field_all_updates
+    - field.field.node.systemdata.field_core_version_number
+    - field.field.node.systemdata.field_error_number
+    - field.field.node.systemdata.field_error_warning
+    - field.field.node.systemdata.field_extension_count
+    - field.field.node.systemdata.field_extension_information
+    - field.field.node.systemdata.field_last_cron_run_time
+    - field.field.node.systemdata.field_security_updates
+    - field.field.node.systemdata.field_site_machine_name
+    - field.field.node.systemdata.field_site_type
+    - field.field.node.systemdata.field_status_report
+    - field.field.node.systemdata.field_warning_number
+    - node.type.systemdata
+  module:
+    - user
+id: node.systemdata.teaser
+targetEntityType: node
+bundle: systemdata
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_all_updates: true
+  field_core_version_number: true
+  field_error_number: true
+  field_error_warning: true
+  field_extension_count: true
+  field_extension_information: true
+  field_last_cron_run_time: true
+  field_security_updates: true
+  field_site_machine_name: true
+  field_site_type: true
+  field_status_report: true
+  field_warning_number: true

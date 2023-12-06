@@ -1,0 +1,5 @@
+name: Overwatch System Data
+type: module
+description: 'A custom module to display system data with interactive JS.'
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,25 @@
+uuid: d8720bc3-19f3-4575-ac34-6a707cc86588
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - overwatch_bp
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: overwatch_bp_site_branding
+theme: overwatch_bp
+region: header_top
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

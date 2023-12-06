@@ -1,0 +1,31 @@
+{# templates/system-data-summary.html.twig #}
+<div class="card-container">
+  <div class="card error-card cursor" data-anchor="errors">
+    <div class="card-content">
+      <span class="card-number">{{ data['errors'] }}</span>
+      <span class="card-label">Errores</span>
+      <span class="card-before">Before: <span class="before-number">0</span></span>
+    </div>
+  </div>
+  <div class="card warning-card cursor" data-anchor="warnings">
+    <div class="card-content">
+      <span class="card-number">{{ data['warnings'] }}</span>
+      <span class="card-label">Warnings</span>
+      <span class="card-before">Before: <span class="before-number">0</span></span>
+    </div>
+  </div>
+  <div class="card security-update-card cursor" data-anchor="security-updates">
+    <div class="card-content">
+      <span class="card-number">{{ data['security_updates'] }}</span>
+      <span class="card-label">Security Updates</span>
+      <span class="card-before">Before: <span class="before-number">0</span></span>
+    </div>
+  </div>
+  <div class="card all-updates-card cursor" data-anchor="all-updates">
+    <div class="card-content">
+      <span class="card-number">{{ data['all_updates'] }}</span>
+      <span class="card-label">All Updates</span>
+      <span class="card-before">Before: <span class="before-number">0</span></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+stages:
+  - deploy
+
+before_script:
+  # See https://docs.gitlab.com/ee/ci/ssh_keys/README.html
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p $HOME/.ssh && echo "StrictHostKeyChecking no" >> "$HOME/.ssh/config"
+  - git config --global user.email "$GITLAB_USER_EMAIL"
+  - git config --global user.name "Gitlab CI"
+
+
+deploy:dev:
+  stage: deploy
+  environment:
+    name: dev
+    url: https://dev-$PANTHEON_SITE.pantheonsite.io/
+  script:
+    - git config checkout.defaultRemote origin
+    - git remote add pantheon $PANTHEON_GIT_URL
+    - git fetch pantheon
+    - git branch -v
+    - git checkout master
+    - git push pantheon master --force
+  only:
+    - master

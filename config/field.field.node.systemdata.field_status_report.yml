@@ -1,0 +1,24 @@
+uuid: 2f88b67f-5377-452f-9cd1-3d6b1510191b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status_report
+    - filter.format.basic_html
+    - node.type.systemdata
+  module:
+    - text
+id: node.systemdata.field_status_report
+field_name: field_status_report
+entity_type: node
+bundle: systemdata
+label: 'Status Report'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

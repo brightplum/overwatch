@@ -1,0 +1,18 @@
+.chart-block {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 1em;
+}
+
+.chart-block h2 {
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.17em;
+  padding: 1.25rem;
+  margin-top: 0;
+}
+
+.chart-block .charts-google {
+  padding: 0 1.25rem;
+}

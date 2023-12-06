@@ -1,0 +1,58 @@
+uuid: bf6a6edc-cabd-49e5-9f3e-fb99c5064fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.extensioninformation.field_current_version
+    - field.field.node.extensioninformation.field_recommend_version
+    - field.field.node.extensioninformation.field_security_update
+    - field.field.node.extensioninformation.field_update_available
+    - node.type.extensioninformation
+  module:
+    - text
+    - user
+id: node.extensioninformation.default
+targetEntityType: node
+bundle: extensioninformation
+mode: default
+content:
+  field_current_version:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_recommend_version:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_security_update:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_update_available:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,18 @@
+html, body {
+  font-family: $font_worksans;
+  font-style: normal;
+  line-height: normal;
+  margin: 0;
+}
+
+h2 {
+  color: $charcoal;
+  font-weight: 600;
+  font-size: rem-calc(25);
+}
+
+h3 {
+  color: $charcoal;
+  font-weight: 600;
+  font-size: rem-calc(20);
+}

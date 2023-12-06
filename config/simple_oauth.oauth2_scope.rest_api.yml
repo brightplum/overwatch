@@ -1,0 +1,22 @@
+uuid: 98d8eeba-bdc7-41b6-affc-69c58288fdc2
+langcode: en
+status: true
+dependencies: {  }
+id: rest_api
+name: rest_api
+description: 'Scope to use for rest api with clients'
+grant_types:
+  refresh_token:
+    status: false
+    description: ''
+  authorization_code:
+    status: false
+    description: ''
+  client_credentials:
+    status: true
+    description: 'Client Auth'
+umbrella: false
+parent: _none
+granularity: role
+permission: ''
+role: rest_api

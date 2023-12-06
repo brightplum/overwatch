@@ -1,0 +1,10 @@
+name: 'Overwatch BP'
+type: module
+description: 'Transmit events to Overwatch BP platform by Brightplum.'
+core_version_requirement: ^9 || ^10
+package: Overwatch Brightplum
+
+dependencies:
+  - drupal:hook_event_dispatcher
+  - drupal:core_event_dispatcher
+  - drupal:queue_ui

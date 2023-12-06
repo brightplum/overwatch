@@ -1,0 +1,82 @@
+/**
+* Header Layout Styles.
+*/
+
+.header-section {
+  justify-content: space-between;
+  padding-top: rem-calc(15);
+
+  @media screen and (min-width: $breakpoint_s) {
+    padding-top: rem-calc(30);
+  }
+}
+
+.overwatch-bp-header-top {
+  border-bottom: rem-calc(1) solid $grey;
+  flex: 1 0 100%;
+  padding-bottom: rem-calc(15);
+
+  @media screen and (min-width: $breakpoint_s) {
+    padding-bottom: rem-calc(30);
+  }
+
+  .site-logo img {
+    height: rem-calc(73);
+    width: rem-calc(211);
+  }
+}
+
+.region--header-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(60);
+
+  @media screen and (min-width: $breakpoint_s) {
+    margin: 0 rem-calc(40);
+  }
+
+  & > * {
+    margin: auto;
+    position: relative;
+
+    @media screen and (min-width: $breakpoint_s) {
+      margin: 0;
+    }
+  }
+
+  & > *:not(:last-child)::before {
+    background: $grey;
+    bottom: 0;
+    content: none;
+    position: absolute;
+    right: rem-calc(-30);
+    top: 0;
+    width: rem-calc(1);
+
+    @media screen and (min-width: $breakpoint_s) {
+      content: "";
+    }
+  }
+}
+
+.region--header {
+  display: flex;
+  gap: rem-calc(20);
+  margin: 0 rem-calc(15);
+
+  @media screen and (min-width: $breakpoint_s) {
+    margin: 0 rem-calc(45);
+  }
+}
+
+.page-title h1 {
+  font-size: rem-calc(25);
+  font-weight: 500;
+  margin: rem-calc(5) 0;
+
+  @media screen and (min-width: $breakpoint_s) {
+    margin: rem-calc(19) 0;
+  }
+}
+
+

@@ -1,0 +1,11 @@
+# Main theme library.
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      dist/css/main.min.css: {}
+  js:
+    dist/js/main.min.js: {}
+  dependencies:    
+    - core/jquery
+    - core/drupal.dialog.ajax

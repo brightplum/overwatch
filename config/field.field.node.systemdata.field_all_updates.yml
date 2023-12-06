@@ -1,0 +1,23 @@
+uuid: b59f5111-29c6-4f00-bd04-6f234ea26927
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_all_updates
+    - node.type.systemdata
+id: node.systemdata.field_all_updates
+field_name: field_all_updates
+entity_type: node
+bundle: systemdata
+label: 'All updates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

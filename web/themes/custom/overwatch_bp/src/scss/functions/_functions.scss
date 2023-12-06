@@ -1,0 +1,26 @@
+/**
+ * Calculate and convert a pixel value to a rem value.
+ *
+ * This function takes a pixel value and calculates the equivalent value in rem units.
+ * It's useful for creating responsive styles that adapt to the user's browser settings.
+ *
+ * @param {number} $size - The pixel value to be converted to rem.
+ * @return {string} The calculated value in rem units.
+ *
+ * @example
+ * // Usage in SCSS:
+ * .example {
+ *   font-size: rem-calc(16px); // Converts 16px to rem units
+ *   margin: rem-calc(20px);    // Converts 20px to rem units
+ * }
+ *
+ * // Compiled CSS:
+ * .example {
+ *   font-size: 1rem;
+ *   margin: 1.25rem;
+ * }
+ */
+@function rem-calc($size) {
+  $remSize: calc($size / 16);
+  @return #{$remSize}rem;
+}

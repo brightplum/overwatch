@@ -1,0 +1,27 @@
+services:
+  overwatch.event_subscriber:
+    class: Drupal\overwatch\EventSubscriber\OverwatchEventSubscriber
+    arguments: ['@logger.factory', '@config.factory', '@request_stack', '@uuid', '@current_user', '@queue']
+    tags:
+      - { name: event_subscriber }
+
+  overwatch.rest_authentication:
+    class: Drupal\overwatch\Service\OverwatchRestAuth
+    arguments: ['@messenger', '@string_translation', '@config.factory']
+
+  overwatch.logs:
+    class: Drupal\overwatch\Logger\OverwatchLog
+    arguments: ['@logger.log_message_parser', '@config.factory', '@request_stack', '@uuid', '@current_user', '@queue']
+    tags:
+      - { name: logger }
+
+  overwatch.system_data_retriever:
+    class: Drupal\overwatch\Service\SystemDataService
+    arguments:
+      - '@logger.factory'
+      - '@update.manager'
+      - '@string_translation'
+      - '@system.manager'
+      - '@renderer'
+      - '@module_handler'
+      - '@config.factory'

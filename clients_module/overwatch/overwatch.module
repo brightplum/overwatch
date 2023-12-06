@@ -1,0 +1,94 @@
+<?php
+
+use \Drupal\Core\Link;
+
+/**
+ * @file Overwatch module file.
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function overwatch_cron() {
+
+  // Get logger.
+  $logger = \Drupal::logger('overwatch_cron');
+
+  // Get time service;
+  $time = \Drupal::time();
+
+  // Get config factory.
+  $config_factory = \Drupal::service('config.factory');
+  $overwatch_settings = $config_factory->get('overwatch.settings');
+  // Get token and expiration date.
+  $token = $overwatch_settings->get('access_token');
+  $expires_in = $overwatch_settings->get('expires_in') ?? NULL;
+
+  // Obtain the queue service for 'system_data_queue'.
+  $queue = \Drupal::queue('system_data_queue');
+  $queue->createItem(TRUE);
+
+  // Check if token is expired.
+  $expired = TRUE;
+  if ($expires_in) {
+    // Compare current time when time token expires.
+    $expired = $time->getCurrentTime() > $expires_in;
+  }
+
+  // Check if token still valid.
+  if (empty($token) || $expired) {
+    // Get URL to admin page.
+    $link = Link::createFromRoute(t('Overwatch Configuration'), 'overwatch.config_form')->toString();
+    $logger->error('Token is expired, go to @url to regenerate it.', [
+      '@url' => $link,
+    ]);
+    return;
+  }
+
+  // Queue name.
+  $queue_names = ['overwatch_queue', 'system_data_queue'];
+
+  // Get information about the queue.
+  $queue_worker_manager = \Drupal::service('plugin.manager.queue_worker');
+  $queues = $queue_worker_manager->getDefinitions();
+  foreach ($queue_names as $queue_name) {
+    $queue_info = $queues[$queue_name];
+
+    // Get 'overwatch_queue' queue.
+    $queue = \Drupal::queue($queue_name);
+  
+    // Max execution time in seconds.
+    $lease_time = (int) $queue_info['cron']['time'];
+    $end = $time->getCurrentTime() + $lease_time;
+  
+    // Get items from queue.
+    while ($time->getCurrentTime() < $end && ($item = $queue->claimItem($lease_time))) {
+      // Log item being processed.
+      $logger->notice('Processing queue item %id.', [
+        '%id' => $item->item_id,
+      ]);
+  
+      // Get worker.
+      $queue_worker = \Drupal::service('plugin.manager.queue_worker')
+        ->createInstance($queue_name);
+  
+      try {
+        // Process item.
+        $queue_worker->processItem($item->data);
+  
+        // Remove item from queue.
+        $queue->deleteItem($item);
+      }
+      catch (\Exception $e) {
+        // Log error.
+        $logger->notice('Adding back to queue item %id.', [
+          '%id' => $item->item_id,
+        ]);
+  
+        // Add back to queue failed item.
+        $queue->releaseItem($item);
+      }
+    }
+  }
+
+}

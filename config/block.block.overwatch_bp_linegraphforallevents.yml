@@ -1,0 +1,25 @@
+uuid: b8d4081f-a45c-437c-9368-ce92a68aa050
+langcode: en
+status: true
+dependencies:
+  module:
+    - overwatch_graphs
+    - system
+  theme:
+    - overwatch_bp
+id: overwatch_bp_linegraphforallevents
+theme: overwatch_bp
+region: content
+weight: -11
+provider: null
+plugin: overwatch_graphs_line_chart_block
+settings:
+  id: overwatch_graphs_line_chart_block
+  label: 'Line Graph for All Events'
+  label_display: '0'
+  provider: overwatch_graphs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/dashboard"

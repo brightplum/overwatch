@@ -1,0 +1,33 @@
+uuid: 5fc47a2e-9481-48b1-8dfb-d56b2ff49e99
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_entity
+field_name: field_event_entity
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: node
+      label: Node
+    -
+      value: block
+      label: Block
+    -
+      value: user
+      label: User
+    -
+      value: error
+      label: Error
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: b0ce484b-f76f-40eb-99d8-d6db4e05b183
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_recommend_version
+field_name: field_recommend_version
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,93 @@
+{# templates/system-data-summary.html.twig #}
+<div class="page layout-container system-data">
+  <div class="card-container">
+    <div class="card others-card" data-anchor="all-updates">
+      <div class="card-content">
+        <span class="card-cron"><i class="fab fa-{{ elements['field_site_type'].0['#markup']|lower }} fa-2x"></i></span>
+        <span class="card-label">Site type</span>
+      </div>
+    </div>
+    <div class="card others-card" data-anchor="all-updates">
+      <div class="card-content">
+        <span class="card-number">{{ elements['field_core_version_number'].0['#text'] }}</span>
+        <span class="card-label">Core version</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+    <div class="card others-card" data-anchor="all-updates">
+      <div class="card-content">
+        <span class="card-number">{{ elements['field_extension_count'].0 }}</span>
+        <span class="card-label">Extension</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+    <div class="card others-card" data-anchor="all-updates">
+      <div class="card-content">
+        <span class="card-cron">{{ elements['field_last_cron_run_time'].0['#text'] }}</span>
+        <span class="card-label">Last Cron</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+    <div class="card error-card cursor" data-anchor="errors">
+      <div class="card-content">
+        <span class="card-number">{{ elements['field_error_number'].0 }}</span>
+        <span class="card-label">Errores</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+    <div class="card warning-card cursor" data-anchor="warnings">
+      <div class="card-content">
+        <span class="card-number">{{ elements['field_warning_number'].0 }}</span>
+        <span class="card-label">Warnings</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+    <div class="card security-update-card cursor" data-anchor="security-updates">
+      <div class="card-content">
+        <span class="card-number">{{ elements['field_security_updates'].0 }}</span>
+        <span class="card-label">Security Updates</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+    <div class="card all-updates-card cursor" data-anchor="all-updates">
+      <div class="card-content">
+        <span class="card-number">{{ elements['field_all_updates'].0 }}</span>
+        <span class="card-label">All Updates</span>
+        <span class="card-before">Before: <span class="before-number">0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="system-data-tables">
+
+    <div id="errors">
+      <h2 class="view-header">Errors</h2>
+      {{ drupal_view('system_data_technical', 'system_data_errors_by_node', elements['#node'].nid.value ) }}
+    </div>
+
+    <div id="warnings">
+      <h2 class="view-header">Warnings</h2>
+      {{ drupal_view('system_data_technical', 'system_data_warnings_by_node', elements['#node'].nid.value) }}
+    </div>
+
+    <div id="security-updates">
+      <h2 class="view-header">Security Updates</h2>
+      {{ drupal_view('system_data_technical', 'system_data_extensions_security_by_node', elements['#node'].nid.value) }}
+    </div>
+
+    <div id="all-updates">
+      <h2 class="view-header">All Updates</h2>
+      {{ drupal_view('system_data_technical', 'system_data_extensions_update_by_node', elements['#node'].nid.value) }}
+    </div>
+
+    <div id="extensions">
+      <h2 class="view-header">Extensions</h2>
+      {{ drupal_view('system_data_technical', 'system_data_extensions_by_node', elements['#node'].nid.value) }}
+    </div>
+
+    <div id="history">
+      <h2 class="view-header">History</h2>
+      {{ drupal_view('system_data_technical', 'system_data_technical_by_node', elements['field_site_machine_name'].0['#context']['value'] ) }}
+    </div>
+  </div>
+</div>

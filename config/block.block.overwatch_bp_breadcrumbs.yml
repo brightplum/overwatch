@@ -1,0 +1,22 @@
+uuid: 884ba08e-59e5-4c8a-94a0-7f9f1ad6e90c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - overwatch_bp
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: overwatch_bp_breadcrumbs
+theme: overwatch_bp
+region: content
+weight: -1
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,42 @@
+uuid: fdc9136e-8ded-44cd-9032-bf663dd51b11
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_event_author
+    - field.field.node.event.field_event_bundle
+    - field.field.node.event.field_event_context
+    - field.field.node.event.field_event_entity
+    - field.field.node.event.field_event_severity
+    - field.field.node.event.field_event_timestamp
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_uuid
+    - field.field.node.event.field_site_base_url
+    - field.field.node.event.field_site_machine_name
+    - field.field.node.event.field_site_name
+    - node.type.event
+  module:
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_event_author: true
+  field_event_bundle: true
+  field_event_context: true
+  field_event_entity: true
+  field_event_severity: true
+  field_event_timestamp: true
+  field_event_type: true
+  field_event_uuid: true
+  field_site_base_url: true
+  field_site_machine_name: true
+  field_site_name: true

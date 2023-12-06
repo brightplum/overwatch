@@ -1,0 +1,19 @@
+uuid: 15017cbf-1fb1-4566-9bc8-bc68c0ab11ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_machine_name
+    - node.type.systemdata
+id: node.systemdata.field_site_machine_name
+field_name: field_site_machine_name
+entity_type: node
+bundle: systemdata
+label: 'Site Machine Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

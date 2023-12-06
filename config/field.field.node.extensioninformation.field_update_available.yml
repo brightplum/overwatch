@@ -1,0 +1,21 @@
+uuid: 6654106e-c7c0-4d34-b7d4-e68f709ac6fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_update_available
+    - node.type.extensioninformation
+id: node.extensioninformation.field_update_available
+field_name: field_update_available
+entity_type: node
+bundle: extensioninformation
+label: 'Update Available'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'TRUE'
+  off_label: 'FALSE'
+field_type: boolean

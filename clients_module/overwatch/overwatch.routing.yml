@@ -1,7 +1,0 @@
-overwatch.config_form:
-  path: '/admin/config/services/overwatch'
-  defaults:
-    _form: '\Drupal\overwatch\Form\OverwatchAdminForm'
-    _title: 'Overwatch Configuration'
-  requirements:
-    _permission: 'administer site configuration'

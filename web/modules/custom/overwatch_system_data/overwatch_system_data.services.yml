@@ -1,4 +1,0 @@
-services:
-  overwatch_system_data.system_data_service:
-    class: Drupal\overwatch_system_data\Service\OverwatchSystemDataService
-    arguments: ['@database', '@entity_type.manager', '@request_stack']

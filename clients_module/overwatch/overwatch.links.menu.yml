@@ -1,8 +1,0 @@
-overwatch.settings:
-  title: 'Overwatch Configuration'
-  description: 'Configure Overwatch settings.'
-  parent: system.admin_config_services
-  route_name: overwatch.config_form
-  weight: 50
-  menu_name: admin
-  

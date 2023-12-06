@@ -1,5 +1,0 @@
-services:
-  overwatch_bp_dropdown.client_switcher:
-    class: Drupal\overwatch_bp_dropdown\Service\ClientSwitcher
-    arguments:
-      - '@database'

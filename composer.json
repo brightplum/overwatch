@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "drupal/hook_event_dispatcher": "^3.3",
+    "drupal/hook_event_dispatcher": "^3.3 || ^4.0@RC",
     "drupal/queue_ui": "^3.1"
   }
 }

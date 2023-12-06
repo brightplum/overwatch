@@ -1,8 +1,23 @@
 {
-  "name": "drupal/overwatch",
+  "name": "brightplum/overwatch",
   "description": "Transmit events to Overwatch BP platform by Brightplum.",
-  "type": "drupal-module",
-  "license": "GPL-2.0-or-later",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "fmitchell",
+      "email": "fredric@brightplum.com"
+    },
+    {
+      "name": "esteban",
+      "email": "esteban@brightplum.com"
+    },
+    {
+      "name": "anthony",
+      "email": "anthony@brightplum.com"
+    },
+  ],
   "require": {
     "drupal/hook_event_dispatcher": "^3.3",
     "drupal/queue_ui": "^3.1"

@@ -1,7 +1,7 @@
 {
   "name": "brightplum/overwatch",
   "description": "Transmit events to Overwatch BP platform by Brightplum.",
-  "type": "library",
+  "type": "drupal-module",
   "license": "MIT",
   "minimum-stability": "dev",
   "authors": [
